@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>StockWise</title>
+    </head>
+
+    <body>
+        <h1>Forecast</h1>
+
+        <section id="form-vendas">
+            <h2>Insert Sales Data</h2>
+
+            <form th:action="@{/}" method="post">
+                <label for="productId">ID do Produto:</label>
+                <input type="text" id="productId" name="productId" required><br><br>
+
+                <label for="dateStart">Start Date</label>
+                <input type="date" id="dateStart" name="dateStart" required><br><br>
+
+                <label for="dateEnd">End Date</label>
+                <input type="date" id="dateEnd" name="dateEnd" required><br><br>
+
+                <button type="submit">Generate Forecast</button>
+            </form>
+        </section>
+
+    </body>
+</html>
