@@ -6,24 +6,33 @@
     </head>
 
     <body>
-        <h1>Forecast</h1>
+        <section>
+            <h2>Insert Product</h2>
 
-        <section id="form-vendas">
-            <h2>Insert Sales Data</h2>
+            <form th:action="@{/products/save}" method="post">
+                <label for="description">Product Description</label>
+                <input type="text" id="description" name="description" required><br><br>
 
-            <form th:action="@{/}" method="post">
-                <label for="productId">ID do Produto:</label>
-                <input type="text" id="productId" name="productId" required><br><br>
-
-                <label for="dateStart">Start Date</label>
-                <input type="date" id="dateStart" name="dateStart" required><br><br>
-
-                <label for="dateEnd">End Date</label>
-                <input type="date" id="dateEnd" name="dateEnd" required><br><br>
-
-                <button type="submit">Generate Forecast</button>
+                <button type="submit">Insert</button>
             </form>
         </section>
 
+        <section>
+            <h1>Product List</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="product : ${products}">
+                        <td th:text="${product.id}"></td>
+                        <td th:text="${product.description}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </body>
 </html>
