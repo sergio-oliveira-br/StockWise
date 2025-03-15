@@ -6,7 +6,7 @@ StockWise is a web application developed with Spring Boot and Machine Learning t
 
 ## Technologies
 
-* **Backend:** Spring Boot, Spring Data JDBC, RESTful API
+* **Backend:** Spring Boot, Spring Data JPA
 * **Frontend:** Thymeleaf, HTML, CSS, JavaScript, Chart.js
 * **Database:** PostgreSQL
 * **Machine Learning:** Smile (initially), with potential for Deeplearning4j in the future
