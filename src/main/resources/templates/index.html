@@ -34,5 +34,46 @@
                 </tbody>
             </table>
         </section>
+
+        <section>
+            <h1>Create a Sales</h1>
+            <form th:action="@{/sales/save}" method="post">
+                <label for="productId">Product ID</label>
+                <input type="text" id="productId" name="productId"><br><br>
+
+                <label for="qty">Quantity</label>
+                <input type="number" id="qty" name="qty"><br><br>
+
+                <label for="salesDate">Sales Date</label>
+                <input type="date" id="salesDate" name="salesDate"><br><br>
+
+                <button type="submit">Insert</button>
+            </form>
+        </section>
+
+        <section>
+            <h1>Sales List</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Product ID</th>
+                        <th>Qty</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr th:each="sale : ${sales}">
+                        <td th:text="${sale.id}"></td>
+                        <td th:text="${sale.products.id}"></td>
+                        <td th:text="${sale.qty}"></td>
+                        <td th:text="${sale.salesDate}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
     </body>
 </html>
