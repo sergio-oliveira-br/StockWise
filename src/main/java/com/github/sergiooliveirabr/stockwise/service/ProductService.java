@@ -5,6 +5,8 @@ import com.github.sergiooliveirabr.stockwise.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 
 @Service
 public class ProductService {
@@ -22,5 +24,9 @@ public class ProductService {
 
     public Iterable<Products> findAll() {
         return productRepository.findAll();
+    }
+
+    public Optional<Products> findById(Long id) {
+        return productRepository.findById(id);
     }
 }
