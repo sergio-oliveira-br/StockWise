@@ -23,7 +23,7 @@ public class ProductController {
     public String createProduct(@ModelAttribute Products product) {
 
         productService.saveProduct(product);
-        return "redirect:/products/all";
+        return "redirect:/";
     }
 
     @GetMapping("/all")
