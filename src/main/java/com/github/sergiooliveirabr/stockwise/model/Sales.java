@@ -20,7 +20,9 @@ public class Sales {
 
     private int qty;
 
-    private LocalDate salesDate;
+    @ManyToOne
+    @JoinColumn(name = "sazonalidadeId")
+    private Seasonality seasonality;
 
     public Long getId() {
         return id;
@@ -46,12 +48,12 @@ public class Sales {
         this.qty = qty;
     }
 
-    public LocalDate getSalesDate() {
-        return salesDate;
+    public Seasonality getSeasonality() {
+        return seasonality;
     }
 
-    public void setSalesDate(LocalDate salesDate) {
-        this.salesDate = salesDate;
+    public void setSeasonality(Seasonality seasonality) {
+        this.seasonality = seasonality;
     }
 
     @Override
@@ -60,7 +62,7 @@ public class Sales {
                 "id=" + id +
                 ", products=" + products +
                 ", qty=" + qty +
-                ", salesDate=" + salesDate +
+                ", seasonality=" + seasonality +
                 '}';
     }
 }
