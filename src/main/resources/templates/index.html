@@ -44,8 +44,8 @@
                 <label for="qty">Quantity</label>
                 <input type="number" id="qty" name="qty"><br><br>
 
-                <label for="salesDate">Sales Date</label>
-                <input type="date" id="salesDate" name="salesDate"><br><br>
+                <label for="seasonality">Seasonality</label>
+                <input type="text" id="seasonality" name="seasonality"><br><br>
 
                 <button type="submit">Insert</button>
             </form>
@@ -68,7 +68,38 @@
                         <td th:text="${sale.id}"></td>
                         <td th:text="${sale.products.id}"></td>
                         <td th:text="${sale.qty}"></td>
-                        <td th:text="${sale.salesDate}"></td>
+                        <td th:text="${sale.seasonality.id}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h1>Create Seasonality</h1>
+
+            <form th:action="@{/seasonality/save}" method="post">
+                <label for="typeOfSeasonality">Type Of Seasonality</label>
+                <input type="text" id="typeOfSeasonality" name="typeOfSeasonality"><br><br>
+
+                <button type="submit">Insert</button>
+            </form>
+        </section>
+
+        <section>
+            <h1>Seasonality List</h1>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr th:each="seasonality : ${seasonalities}">
+                        <th th:text="${seasonality.id}"></th>
+                        <th th:text="${seasonality.typeOfSeasonality}"></th>
                     </tr>
                 </tbody>
             </table>
