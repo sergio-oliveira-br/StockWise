@@ -26,7 +26,7 @@ public class SeasonalityController {
 
     @GetMapping("/all")
     public String getAllSeasonalities(Model model) {
-        model.addAttribute("seasonalities", seasonalityService.findAllSeasonality());
+        model.addAttribute("seasonalities", seasonalityService.findAllSeasonalities());
         return "index";
     }
 }
