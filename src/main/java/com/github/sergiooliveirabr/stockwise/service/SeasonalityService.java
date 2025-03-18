@@ -21,11 +21,11 @@ public class SeasonalityService {
         seasonalityRepository.save(seasonality);
     }
 
-    public Iterable<Seasonality> findAllSeasonality() {
+    public Iterable<Seasonality> findAllSeasonalities() {
         return seasonalityRepository.findAll();
     }
 
-    public Optional<Seasonality> getSeasonalityById(Long id) {
+    public Optional<Seasonality> findSeasonalityById(Long id) {
         return seasonalityRepository.findById(id);
     }
 }
