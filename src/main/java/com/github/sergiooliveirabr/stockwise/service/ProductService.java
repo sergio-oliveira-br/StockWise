@@ -22,11 +22,11 @@ public class ProductService {
         productRepository.save(products);
     }
 
-    public Iterable<Products> findAll() {
+    public Iterable<Products> findAllProducts() {
         return productRepository.findAll();
     }
 
-    public Optional<Products> findById(Long id) {
+    public Optional<Products> findProductById(Long id) {
         return productRepository.findById(id);
     }
 }
