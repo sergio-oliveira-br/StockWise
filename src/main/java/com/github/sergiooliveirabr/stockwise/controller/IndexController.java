@@ -31,9 +31,9 @@ public class IndexController {
 
         System.out.println("Rota raiz acessada!");
 
-        model.addAttribute("products", productService.findAll());
-        model.addAttribute("sales", saleService.findAll());
-        model.addAttribute("seasonalities",seasonalityService.findAllSeasonality() );
+        model.addAttribute("products", productService.findAllProducts());
+        model.addAttribute("sales", saleService.findAllSales());
+        model.addAttribute("seasonalities",seasonalityService.findAllSeasonalities() );
         return "index";
     }
 
