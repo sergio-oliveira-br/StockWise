@@ -9,7 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.text.html.Option;
 import java.util.Optional;
 
 @Controller
@@ -28,7 +27,7 @@ public class SaleController {
     @PostMapping("/save")
     public String createSales(@ModelAttribute Sales sale, @RequestParam (name = "productId")Long productId) {
 
-        Optional<Products> productOptional = productService.findById(productId);
+        Optional<Products> productOptional = productService.findProductById(productId);
 
         if (productOptional.isPresent()) {
             sale.setProducts(productOptional.get());
@@ -42,7 +41,7 @@ public class SaleController {
     @GetMapping("/all")
     public String getAllSales(Model model) {
 
-        model.addAttribute("sales", saleService.findAll());
+        model.addAttribute("sales", saleService.findAllSales());
         return "index";
     }
 }
