@@ -19,7 +19,7 @@ public class SaleService {
         salesRepository.save(sales);
     }
 
-    public Iterable<Sales> findAll() {
+    public Iterable<Sales> findAllSales() {
         return salesRepository.findAll();
     }
 
