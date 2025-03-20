@@ -5,6 +5,8 @@ import com.github.sergiooliveirabr.stockwise.repository.SalesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class SaleService {
 
@@ -19,8 +21,10 @@ public class SaleService {
         salesRepository.save(sales);
     }
 
-    public Iterable<Sales> findAllSales() {
+    public List<Sales> findAllSales() {
         return salesRepository.findAll();
     }
+
+
 
 }
