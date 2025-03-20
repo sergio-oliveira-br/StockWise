@@ -7,16 +7,7 @@ StockWise is a web application developed with Spring Boot and Machine Learning t
 ## Technologies
 
 * **Backend:** Spring Boot, Spring Data JPA
-* **Frontend:** Thymeleaf, HTML, CSS, JavaScript, Chart.js
+* **Frontend:** Thymeleaf, HTML
 * **Database:** PostgreSQL
-* **Machine Learning:** Smile (initially), with potential for Deeplearning4j in the future
+* **Machine Learning:** Weka
 * **Build:** Maven
-
-
-## Features
-
-* Stock demand forecasting based on historical data and seasonal factors.
-* Web interface to enter data and view forecasts.
-* Comparative graphs between actual sales and forecasts.
-* Recommendation of necessary stock quantity.
-* Storage of historical data in PostgreSQL.
